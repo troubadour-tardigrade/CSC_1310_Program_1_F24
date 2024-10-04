@@ -61,7 +61,7 @@ void Shelf::setType(std::string type)
 // return the media object at the index provided in the argument as a Media object
 Media Shelf::getItem(int index)
 {
-    return (media.at(index - 1));
+    return (media.at(index));
 }
 
 // return the media type of the shelf as a string
