@@ -68,3 +68,19 @@ void Storage::delShelf(int index){
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
+
+// Function definition for getSize to return the current size of the library.
+int Storage::getSize()
+{
+    return size;
+}
+
+// Function definition for printStorage to return the media type of each shelf currently in the library
+void Storage::printStorage()
+{
+    std::cout << std::endl;  // Create a line break to allow for better readability in the CLI
+    for (int i = 0; i < getSize(); i++)
+    {
+        std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
+    }
+}
