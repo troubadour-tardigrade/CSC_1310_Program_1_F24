@@ -23,5 +23,5 @@ class Storage{
     void delShelf(int);
     Shelf getShelf(int);
     int getSize();
-    void printStorage();
+    void printStorage(bool showMediaType = false);
 };
