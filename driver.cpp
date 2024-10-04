@@ -56,7 +56,6 @@ int main()
         switch (userChoice)
         {
         case 1:
-            std::cin.ignore();
 
             // Printing all shelves that currently exist in the library
             library.printStorage();
@@ -69,32 +68,43 @@ int main()
             import_Shelf = library.getShelf(shelf_index); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
 
             printShelfMenu(import_Shelf);
-            inpVer(userChoice, 1, 4);
+            inpVer(userChoice, 5, 8);
             switch (userChoice)
             {
-            case 1:
+            case 5:
                 // print all titles of shelf content
+                for (int i = 0; i < import_Shelf.getSize(); i++)
+                {
+                    std::cout << "Item Index: " << i
+                              << "\tItem Title: " << import_Shelf.getItem(i).getTitle()
+                              << "\tCreator: " << import_Shelf.getItem(i).getCreator()
+                              << "\tYear released: " << import_Shelf.getItem(i).getYear()
+                              << "\tTimes played: " << import_Shelf.getItem(i).getNum() << std::endl;
+                }
                 break;
 
-            case 2:
+            case 6:
                 // Take in the index value of an item and return all of the information on that item
+                
                 break;
 
-            case 3:
+            case 7:
                 // Ask the user if they want to delete one element or a range of elements
                 // Then ask for the index or lower and upper index values they wish to delete
                 // Then delete the indicies
                 break;
-            case 4:
-                // Exit the shelf back to the library
+            case 8:
+                printMainMenu(library);
+                inpVer(userChoice,1,4);
                 break;
-            default;
+            default:
                 break;
             }
 
+
             break; // edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                    // or edit individual element
-        case 2:
+        case 2: 
             std::cin.ignore();
 
             // Asking the user for the file name of the file they wish to import
@@ -122,7 +132,7 @@ int main()
                           << std::endl;
             }
 
-            break; // input file name, call importFile()
+            break; 
         case 3:
             std::cin.ignore();
             break; // iterate through shelves, input filename/ directory and call export file for each
@@ -130,15 +140,17 @@ int main()
             break;
         }
     } while (userChoice != 4);
+
+    return 0;
 }
 
 void printMainMenu(Storage library)
 {
     std::cout << "\nYour library contains:";
-    // instead of library.getSize()
-    for (int i = 0; i < 2; i++)
+
+    for (int i = 0; i < library.getSize(); i++)
     {
-        std::cout << "\n\nShelf " << i + 1 << " size: " << library.getShelf(i).getSize();
+        std::cout << "\n\nShelf " << i + 1 << " type: " << library.getShelf(i).getType();
     }
     std::cout << "\n\nOptions:";
     std::cout << "\n1. Edit a shelf";
@@ -163,10 +175,10 @@ void printShelfMenu(Shelf shelf)
     std::cout << "Type of media on shelf:\t" << shelf.getType() << std::endl;
 
     std::cout << "Options:" << std::endl;
-    std::cout << "1.\tView Shelf Content" << std::endl;
-    std::cout << "2.\tView more information about an item on the shelf" << std::endl;
-    std::cout << "3.\tDelete item(s) from the shelf" << std::endl;
-    std::cout << "4.\tExit the shelf" << std::endl;
+    std::cout << "5.\tView Shelf Content" << std::endl;
+    std::cout << "6.\tView more information about an item on the shelf" << std::endl;
+    std::cout << "7.\tDelete item(s) from the shelf" << std::endl;
+    std::cout << "8.\tExit the shelf" << std::endl;
 }
 // From hsUtil
 

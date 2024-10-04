@@ -44,8 +44,12 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
         getline(inputFile, input, ','); // reading from the last delimiter to the end of the line as the arbituary file size of the media object
         temp.setSize(stod(input));
 
+
+
         // adding to media
         shelfMedia.addItem(temp);
+
+
     } while (!inputFile.eof()); // checking for end
 
     // closing and returning
