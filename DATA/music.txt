@@ -1,26 +1,26 @@
-Name,Artist,Year,
-Blinding Lights,The Weeknd,2019,
-Shape of You,Ed Sheeran,2017,
-Someone You Loved,Lewis Capaldi,2018,
-As It Was,Harry Styles,2022,
-Sunflower,Post Malone,2018,
-StarBoy,The Weeknd,2016,
-One Dance,Drake,2016,
-Stay,The Kid Laroi,2021,
-Sweater Weather,The Neighbourhood,2012,
-Dance Monkey,Tones And I,2019,
-Believer,Imagine Dragons,2017,
-Heat Waves,Glass Animals,2020,
-Perfect,Ed Sheeran,2017,
-Rockstar,Post Malone,2017,
-Say You Won't Let Go,James Arthur,2016,
-Closer,The Chainsmokers,2016,
-Lovely,Billie Eilish,2018,
-Watermelon Sugar,Harry Styles,2019,
-SeÃ±orita,Shawn Mendes,2019,
-Something Just Like This,Coldplay,2017,
-Don't Start Now,Dua Lipa,2019,
-Ripetide,Vance Joy,2013,
-Take Me To Church,Hozier,2013,
-Another Love,Tom Odell,1012,
-Lucid Dreams,Juice WRLD,2018,
+Name,Artist,Year,Daily Listens
+Blinding Lights,The Weeknd,2019,13000
+Shape of You,Ed Sheeran,2017,12987
+Someone You Loved,Lewis Capaldi,2018,12322
+As It Was,Harry Styles,2022,11732
+Sunflower,Post Malone,2018,11084
+StarBoy,The Weeknd,2016,10083
+One Dance,Drake,2016,13987
+Stay,The Kid Laroi,2021,13982
+Sweater Weather,The Neighbourhood,2012,9382
+Dance Monkey,Tones And I,2019,9082
+Believer,Imagine Dragons,2017,9203
+Heat Waves,Glass Animals,2020,9204
+Perfect,Ed Sheeran,2017,9203
+Rockstar,Post Malone,2017,9104
+Say You Won't Let Go,James Arthur,2016,9012
+Closer,The Chainsmokers,2016,8013
+Lovely,Billie Eilish,2018,8103
+Watermelon Sugar,Harry Styles,2019,8504
+SeÃ±orita,Shawn Mendes,2019,8461
+Something Just Like This,Coldplay,2017,7365
+Don't Start Now,Dua Lipa,2019,7423
+Ripetide,Vance Joy,2013,7623
+Take Me To Church,Hozier,2013,6153
+Another Love,Tom Odell,1012,5241
+Lucid Dreams,Juice WRLD,2018,4123
