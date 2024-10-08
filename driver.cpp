@@ -14,7 +14,7 @@
 
 #include "Storage.h"
 
-void printMainMenu(Storage library);
+void printMainMenu(Storage &library);
 void printShelfMenu(Shelf shelf);
 void inpVer(int &out, int lowerBound, int upperBound, std::string qText = "Enter choice:   ", std::string invText = "Input invalid.");
 
@@ -29,23 +29,16 @@ int main()
     // main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
     std::cout << "\n***Welcome to Media Library!***\n";
 
-    // TEMP!!! JUST FOR TESTING
-    Media A("Media A", "J S", 2002, 0);
-    Media B("Media B", "J S", 2002, 0);
-    Media C("Media C", "J S", 2002, 0);
+    Media A("The Wisdom of the Bullfrog", "Admiral Bill McRaven", 2023, 2799);
 
-    Media arr1[] = {A, B};
-    Media arr2[] = {C};
+    Media arr1[] = {A};
 
     Shelf SA(arr1); // Initalizing Shelf Object A
-    Shelf SB(arr2); // Initalizing Shelf Object B
+    SA.setType("Books");
 
-    Storage library(2); // Initalizing Storage Object with a size of 2 for the two shelves currently intialized
+    Storage library(1); // Initalizing Storage Object with a size of 2 for the two shelves currently intialized
 
     library.setMedia(0, SA);
-    library.setMedia(1, SB);
-
-    // read test case
 
     // create menu
 
@@ -55,6 +48,7 @@ int main()
         inpVer(userChoice, 1, 4);
         switch (userChoice)
         {
+        // case 1 is for editing a shelf (Adding to an existing shelf, viewing the items on a shelf, etc.)
         case 1:
 
             // Printing all shelves that currently exist in the library
@@ -65,9 +59,9 @@ int main()
             std::cout << std::endl
                       << std::endl; // Creating a larger break between the lines of text for better readability
 
-            import_Shelf = library.getShelf(shelf_index); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
+            library.changeShelf(library.getShelf(shelf_index - 1));
 
-            printShelfMenu(import_Shelf);
+            printShelfMenu(library.getShelf(shelf_index - 1));
             inpVer(userChoice, 5, 8);
             switch (userChoice)
             {
@@ -85,7 +79,7 @@ int main()
 
             case 6:
                 // Take in the index value of an item and return all of the information on that item
-                
+
                 break;
 
             case 7:
@@ -95,16 +89,17 @@ int main()
                 break;
             case 8:
                 printMainMenu(library);
-                inpVer(userChoice,1,4);
+                inpVer(userChoice, 1, 4);
                 break;
             default:
                 break;
             }
 
-
             break; // edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                    // or edit individual element
-        case 2: 
+
+        // case 2 is for importing data from a file to the library,  gives the option to create a new shelf for the new data.
+        case 2:
             std::cin.ignore();
 
             // Asking the user for the file name of the file they wish to import
@@ -118,10 +113,16 @@ int main()
             // Asking the user what shelf they wish to import to
             std::cout << "Which shelf do you want to store this data on?";
             library.printStorage();
+            std::cout << "To create a new shelf for the new information, please enter:\t" << library.getSize() + 1 << std::endl;
             std::cin >> shelf_index;
             std::cin.ignore();
 
-            import_Shelf = library.getShelf(shelf_index); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
+            // Checking if the entered value is an existing shelf index in the library
+            if ((shelf_index <= library.getSize() - 1) && (shelf_index >= 0))
+            {
+                import_Shelf = library.getShelf(shelf_index + 1); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
+            }
+
             if (importFile(file_name, media_file_type, import_Shelf))
             {
                 std::cout << "File successfully imported" << std::endl;
@@ -132,7 +133,7 @@ int main()
                           << std::endl;
             }
 
-            break; 
+            break;
         case 3:
             std::cin.ignore();
             break; // iterate through shelves, input filename/ directory and call export file for each
@@ -144,7 +145,7 @@ int main()
     return 0;
 }
 
-void printMainMenu(Storage library)
+void printMainMenu(Storage &library)
 {
     std::cout << "\nYour library contains:";
 

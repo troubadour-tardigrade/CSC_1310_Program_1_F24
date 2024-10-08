@@ -37,7 +37,7 @@ void Storage::setMedia(int index, Shelf &obj)
         return;
 }
 
-// Functio definition for changeSize of the vector.
+// Function definition for changeSize of the vector to allow for more shelves to be added.
 void Storage::changeSize(int newSize)
 {
 
@@ -107,4 +107,18 @@ void Storage::printStorage(bool showMediaType)
             std::cout << std::endl;
         }
     }
+}
+
+void Storage::changeShelf(Shelf newObj)
+{
+    changeSize(size);
+    stg[size] = new Shelf;
+    *stg[size] = newObj;
+    size++;
+}
+
+void Storage::changeShelf(Shelf newObj, int i)
+{
+    stg[i] = new Shelf;
+    *stg[i] = newObj;
 }
