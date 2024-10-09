@@ -54,12 +54,11 @@ int main()
             // Printing all shelves that currently exist in the library
             library.printStorage();
 
-            std::cout << "Enter the index for the shelf you wish to edit:\t";
+            std::cout << std::endl << "Enter the index for the shelf you wish to edit:\t";
             std::cin >> shelf_index;
-            std::cout << std::endl
-                      << std::endl; // Creating a larger break between the lines of text for better readability
-
-            library.changeShelf(library.getShelf(shelf_index - 1));
+            std::cin.ignore();
+            std::cout << std::endl; // Creating a break between the lines of text for better readability
+            
 
             printShelfMenu(library.getShelf(shelf_index - 1));
             inpVer(userChoice, 5, 8);
@@ -67,13 +66,13 @@ int main()
             {
             case 5:
                 // print all titles of shelf content
-                for (int i = 0; i < import_Shelf.getSize(); i++)
+                for (int i = 0; i < library.getShelf(shelf_index - 1).getSize(); i++)
                 {
                     std::cout << "Item Index: " << i
-                              << "\tItem Title: " << import_Shelf.getItem(i).getTitle()
-                              << "\tCreator: " << import_Shelf.getItem(i).getCreator()
-                              << "\tYear released: " << import_Shelf.getItem(i).getYear()
-                              << "\tTimes played: " << import_Shelf.getItem(i).getNum() << std::endl;
+                              << "\tItem Title: " << library.getShelf(shelf_index - 1).getItem(i).getTitle()
+                              << "\tCreator: " << library.getShelf(shelf_index - 1).getItem(i).getCreator()
+                              << "\tYear released: " << library.getShelf(shelf_index - 1).getItem(i).getYear()
+                              << "\tTimes played: " << library.getShelf(shelf_index - 1).getItem(i).getNum() << std::endl;
                 }
                 break;
 
@@ -116,11 +115,25 @@ int main()
             std::cout << "To create a new shelf for the new information, please enter:\t" << library.getSize() + 1 << std::endl;
             std::cin >> shelf_index;
             std::cin.ignore();
+            
+
+            std::cout << "Lib Size:\t" << library.getSize() << std::endl;
 
             // Checking if the entered value is an existing shelf index in the library
             if ((shelf_index <= library.getSize() - 1) && (shelf_index >= 0))
             {
-                import_Shelf = library.getShelf(shelf_index + 1); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
+                import_Shelf = library.getShelf(shelf_index - 1); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
+            }
+            else if (shelf_index == (library.getSize() + 1))
+            {
+                library.newShelf();   // Passing an arbituary shelf object to appease the changeShelf function
+    
+                std::cout << "Lib Size:\t" << library.getSize() << std::endl;
+
+                std::cout << "getShelf CHECK" << std::endl;
+
+                import_Shelf = library.getShelf(shelf_index - 1);
+                
             }
 
             if (importFile(file_name, media_file_type, import_Shelf))
@@ -171,7 +184,7 @@ void printShelfMenu(Shelf shelf)
         - Remove an element from the shelf
         - Exit Shelf
     */
-    std::cout << "Information about this shelf." << std::endl;
+    std::cout << "Information about this shelf." << std::endl << std::endl;
     std::cout << "Number of items on the shelf:\t" << shelf.getSize() << std::endl;
     std::cout << "Type of media on shelf:\t" << shelf.getType() << std::endl;
 
@@ -201,7 +214,7 @@ void inpVer(int &out, int lowerBound, int upperBound, std::string qText, std::st
         if (std::cin.fail())
         {
             std::cin.clear();
-            std::cin.ignore(100000000000000000, '\n');
+            std::cin.ignore(INT_MAX, '\n');
             std::cout << "\n"
                       << invText;
         }

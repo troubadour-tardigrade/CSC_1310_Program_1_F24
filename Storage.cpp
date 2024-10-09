@@ -57,11 +57,13 @@ void Storage::changeSize(int newSize)
         }
     }
 
+
     // set stg to temp
     stg = temp;
 
     // clear temp
-    delete[] *temp;
+    delete[] temp;
+
 }
 
 // Function defintion for delShelf
@@ -79,7 +81,6 @@ void Storage::delShelf(int index)
 // Function definition for getShelf which will return the current shelf content
 Shelf Storage::getShelf(int index)
 {
-
     return (*stg[index]);
 }
 
@@ -109,16 +110,23 @@ void Storage::printStorage(bool showMediaType)
     }
 }
 
-void Storage::changeShelf(Shelf newObj)
+void Storage::changeShelf(Shelf& newObj)
 {
     changeSize(size);
-    stg[size] = new Shelf;
-    *stg[size] = newObj;
+    stg[size - 1] = new Shelf;
+    *stg[size - 1] = newObj;
     size++;
 }
 
-void Storage::changeShelf(Shelf newObj, int i)
+
+void Storage::changeShelf(Shelf& newObj, int i)
 {
     stg[i] = new Shelf;
     *stg[i] = newObj;
+}
+
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size - 1] = new Shelf;
+    size++;
 }

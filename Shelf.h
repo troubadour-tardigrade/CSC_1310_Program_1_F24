@@ -22,7 +22,7 @@ struct Shelf{
             this->type = type;
         }
         ~Shelf(){
-          media.clear();
+            media.clear();
         }
         Shelf(Media arr[]);
         void setItem(Media, int);
