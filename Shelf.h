@@ -14,15 +14,27 @@ struct Shelf{
         std::string type;
         int size;
     public:
+        //default constructor
         Shelf(){
             size = 0;
             type = "Basic Media";
         }
+        //overloaded constructor
         Shelf(std::string type){
             this->type = type;
         }
+        //destructor
         ~Shelf(){
             media.clear();
+        }
+        //copy assignment operator - https://en.cppreference.com/w/cpp/language/copy_assignment
+        Shelf& operator = (const Shelf& other){
+            for(int i = 0; i < other.media.size(); i++){
+                this->media.push_back(other.media.at(i)); 
+            }
+            this->size = other.size;
+            this->type = other.type;
+            return *this;
         }
         Shelf(Media arr[]);
         void setItem(Media, int);

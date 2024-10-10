@@ -9,22 +9,29 @@ class Storage{
         int size;
         Shelf** stg;
     public:
+    //default constructor
     Storage(){
-        size = 1;
+        size = 0;
         stg = new Shelf*[size];
     }
+    //destructor
     ~Storage(){
+        std::cout << this << " destroyed\n";
+        for(int i = 0; i < size; i++){
+            delete stg[i];
+        }
         delete stg;
     }
+
     Storage(int);
     Storage(int, Shelf[]);
     void setMedia(int, Shelf&);
     void changeSize(int);
     void delShelf(int);
+    Shelf* getS(int);
     Shelf getShelf(int);
     int getSize();
     void printStorage(bool showMediaType = false);
-    void changeShelf(Shelf&);
-    void changeShelf(Shelf&, int);
+    void changeShelf(Shelf&, int i);
     void newShelf();
 };

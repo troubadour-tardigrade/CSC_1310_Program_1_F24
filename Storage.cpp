@@ -53,17 +53,18 @@ void Storage::changeSize(int newSize)
         }
         else if (i >= size)
         {
-            *(temp + i) = NULL;
+            *(temp + i) = nullptr;
         }
     }
-
+    
+    //remove old array
+    delete[] stg;
 
     // set stg to temp
     stg = temp;
 
-    // clear temp
-    delete[] temp;
-
+    // set size variable
+    size = newSize; 
 }
 
 // Function defintion for delShelf
@@ -78,10 +79,14 @@ void Storage::delShelf(int index)
     changeSize(size - 1);
 }
 
-// Function definition for getShelf which will return the current shelf content
-Shelf Storage::getShelf(int index)
+// Function definition for getS which will return the a pointer to the current shelf content
+Shelf* Storage::getS(int index)
 {
-    return (*stg[index]);
+    return (stg[index]);
+}
+
+Shelf Storage::getShelf(int index){
+    return (*stg[index]);   
 }
 
 // Function definition for getSize to return the current size of the library.
@@ -110,23 +115,17 @@ void Storage::printStorage(bool showMediaType)
     }
 }
 
-void Storage::changeShelf(Shelf& newObj)
-{
-    changeSize(size);
-    stg[size - 1] = new Shelf;
-    *stg[size - 1] = newObj;
-    size++;
-}
-
 
 void Storage::changeShelf(Shelf& newObj, int i)
 {
+    if(i >= size){
+        changeSize(i + 1);
+    }
     stg[i] = new Shelf;
     *stg[i] = newObj;
 }
 
 void Storage::newShelf(){
     changeSize(size);
-    stg[size - 1] = new Shelf;
-    size++;
+    stg[size] = new Shelf();
 }

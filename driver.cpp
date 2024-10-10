@@ -60,7 +60,7 @@ int main()
             std::cout << std::endl; // Creating a break between the lines of text for better readability
             
 
-            printShelfMenu(library.getShelf(shelf_index - 1));
+            printShelfMenu(*library.getS(shelf_index - 1));
             inpVer(userChoice, 5, 8);
             switch (userChoice)
             {
@@ -113,31 +113,17 @@ int main()
             std::cout << "Which shelf do you want to store this data on?";
             library.printStorage();
             std::cout << "To create a new shelf for the new information, please enter:\t" << library.getSize() + 1 << std::endl;
-            std::cin >> shelf_index;
+            inpVer(shelf_index, 1, library.getSize() + 1);
             std::cin.ignore();
-            
 
             std::cout << "Lib Size:\t" << library.getSize() << std::endl;
 
-            // Checking if the entered value is an existing shelf index in the library
-            if ((shelf_index <= library.getSize() - 1) && (shelf_index >= 0))
-            {
-                import_Shelf = library.getShelf(shelf_index - 1); // Retrieving the shelf the user wants to import to and setting the memory address to the import_Shelf variable
-            }
-            else if (shelf_index == (library.getSize() + 1))
-            {
-                library.newShelf();   // Passing an arbituary shelf object to appease the changeShelf function
-    
-                std::cout << "Lib Size:\t" << library.getSize() << std::endl;
-
-                std::cout << "getShelf CHECK" << std::endl;
-
-                import_Shelf = library.getShelf(shelf_index - 1);
-                
-            }
-
             if (importFile(file_name, media_file_type, import_Shelf))
             {
+                library.changeShelf(import_Shelf, shelf_index - 1);
+                std::cout << shelf_index << " : " << library.getSize() << "\n";
+                std::cout << "Lib Size:\t" << library.getSize() << std::endl;
+                std::cout << "\nImported " << library.getShelf(0).getSize() << " thingiaans\n";
                 std::cout << "File successfully imported" << std::endl;
             }
             else
