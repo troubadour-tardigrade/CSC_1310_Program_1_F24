@@ -1,5 +1,5 @@
 /*
- * Contributors: J Seger, Nick Romsdal
+ * Contributors: J Seger, Nick Romsdal, Jonathan Salvato
  * 9/27/24
  * Driver file
  */
@@ -117,13 +117,12 @@ int main()
             std::cin.ignore();
 
             std::cout << "Lib Size:\t" << library.getSize() << std::endl;
-
+            import_Shelf.removeItem(0, import_Shelf.getSize());
             if (importFile(file_name, media_file_type, import_Shelf))
             {
                 library.changeShelf(import_Shelf, shelf_index - 1);
-                std::cout << shelf_index << " : " << library.getSize() << "\n";
                 std::cout << "Lib Size:\t" << library.getSize() << std::endl;
-                std::cout << "\nImported " << library.getShelf(0).getSize() << " thingiaans\n";
+                std::cout << "\nImported " << library.getShelf(0).getSize() << " things\n";
                 std::cout << "File successfully imported" << std::endl;
             }
             else

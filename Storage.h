@@ -16,7 +16,6 @@ class Storage{
     }
     //destructor
     ~Storage(){
-        std::cout << this << " destroyed\n";
         for(int i = 0; i < size; i++){
             delete stg[i];
         }
