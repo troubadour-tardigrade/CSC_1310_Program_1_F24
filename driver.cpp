@@ -20,6 +20,7 @@ void inpVer(int& out, int lowerBound, int upperBound, std::string qText = "Enter
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
 int main(){
     //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
 =======
@@ -27,6 +28,13 @@ int main()
 {
     //variable declerations
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
 int main()
 {
 =======
@@ -64,10 +72,23 @@ int main()
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
 =======
 int main(){
     //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
 >>>>>>> parent of 119a1c4 (complete program 1)
+<<<<<<< HEAD
+=======
+=======
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
     std::cout << "\n***Welcome to Media Library!***\n";
 
     //TEMP!!! JUST FOR TESTING
@@ -78,12 +99,20 @@ int main(){
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
     Media arr1[] = {A, B};
     Media arr2[] = {C};
 =======
     //default/base library
     Media arr1[] = {A};
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
     Media arr1[] = {A};
 =======
 <<<<<<< HEAD
@@ -99,10 +128,23 @@ int main(){
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
 =======
     Media arr1[] = {A, B};
     Media arr2[] = {C};
 >>>>>>> parent of 119a1c4 (complete program 1)
+<<<<<<< HEAD
+=======
+=======
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 
     std::cout << "Hello there";
 
@@ -127,10 +169,26 @@ int main(){
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< HEAD
 >>>>>>> driver-case-statement
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
         switch(userChoice){
             case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                            //or edit individual element
@@ -138,8 +196,18 @@ int main(){
             case 3: break; //iterate through shelves, input filename/ directory and call export file for each
             default: break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 =======
 =======
 >>>>>>> driver-case-statement
@@ -298,8 +366,18 @@ int main(){
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
         }
     }while(userChoice!=4);
 }
@@ -307,6 +385,7 @@ int main(){
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
 void printMenu(Storage library){
 =======
 
@@ -314,6 +393,13 @@ void printMenu(Storage library){
 void printMainMenu(Storage &library)
 {
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
 void printMainMenu(Storage &library)
 {
 =======
@@ -332,9 +418,21 @@ void printMainMenu(Storage &library)
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 =======
 void printMenu(Storage library){
 >>>>>>> parent of 119a1c4 (complete program 1)
+=======
+<<<<<<< Updated upstream
+=======
+=======
+void printMenu(Storage library){
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+void printMenu(Storage library){
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
     std::cout << "\nYour library contains:";
     //instead of library.getSize()
     for(int i = 0; i < 2; i++){

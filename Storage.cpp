@@ -5,6 +5,11 @@
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
@@ -16,6 +21,16 @@
 =======
 >>>>>>> Stashed changes
 /*
+<<<<<<< HEAD
+>>>>>>> driver-case-statement
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+/* 
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
 >>>>>>> driver-case-statement
  * Written by Jonathan Salvato
  * 9/25/24
@@ -85,10 +100,18 @@ void Storage::delShelf(int index){
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Function definition for getShelf which will return the current shelf content
 =======
 // Function definition for getS which will return A POINTER to the current shelf content
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
 // Function definition for getS which will return the a pointer to the current shelf content
 =======
 <<<<<<< HEAD
@@ -118,10 +141,22 @@ Shelf* Storage::getS(int index)
 =======
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 =======
 // Function definition for getShelf which will return the current shelf content
 >>>>>>> parent of 119a1c4 (complete program 1)
+<<<<<<< HEAD
+=======
+=======
+// Function definition for getShelf which will return the current shelf content
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
@@ -138,7 +173,31 @@ void Storage::printStorage()
     std::cout << std::endl;  // Create a line break to allow for better readability in the CLI
     for (int i = 0; i < getSize(); i++)
     {
+<<<<<<< HEAD
         std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
+=======
+<<<<<<< Updated upstream
+        std::cout << "Shelf " << (i + 1);
+=======
+        std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+}
+>>>>>>> Stashed changes
+
+        if (showMediaType)
+        {
+            std::cout << " media type:\t" << getShelf(i).getType() << std::endl; // print each shelf's media type
+        }
+        else
+        {
+            std::cout << std::endl;
+        }
+>>>>>>> driver-case-statement
     }
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -198,6 +257,16 @@ void Storage::newShelf(){
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 }

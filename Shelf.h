@@ -30,6 +30,11 @@ struct Shelf{
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
 <<<<<<< Updated upstream
           media.clear();
 =======
@@ -52,6 +57,10 @@ struct Shelf{
           media.clear();
 >>>>>>> parent of 119a1c4 (complete program 1)
         }
+=======
+          media.clear();
+        }
+>>>>>>> parent of 119a1c4 (complete program 1)
         Shelf(Media arr[]);
         void setItem(Media, int);
         void setItem(std::string, std::string, int, double, int);

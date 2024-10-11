@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> driver-case-statement
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
 /* 
@@ -8,8 +19,15 @@
  * 9/23/24
  * Purpose Dynamically allocate media types
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -28,10 +46,22 @@
 /*
  * Contributors: Jonathan Salvato, Nick Romsdal
  * 9/23/24, 10/4/2024
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+ * Purpose Dynamically allocate media types
+=======
+>>>>>>> driver-case-statement
  * Purpose: Dynamically allocate media types
 >>>>>>> Stashed changes
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
  */
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){

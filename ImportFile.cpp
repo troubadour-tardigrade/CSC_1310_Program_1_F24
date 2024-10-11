@@ -39,6 +39,7 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
         if(input.at(0) == '\n'){ //removing breaks if they exist
@@ -47,6 +48,13 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
         
 >>>>>>> Stashed changes
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
         if(input.at(0) == '\n'){
             input.erase(0, 1);
         }
@@ -66,9 +74,20 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
         }
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 >>>>>>> driver-case-statement
 =======
 >>>>>>> parent of 119a1c4 (complete program 1)
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
         temp.setTitle(input);
         getline(inputFile, input, ','); // reading between the first and second delimiter as the creator/publisher of the media object
         temp.setCreator(input);
