@@ -1,7 +1,7 @@
 /* 
- * Contributers: Jonathan Salvato
+ * Written by Jonathan Salvato
  * 9/23/24
- * Purpose: Dynamically allocate media types
+ * Purpose Dynamically allocate media types
  */
 #ifndef SHELF_H
 #define SHELF_H
@@ -22,6 +22,7 @@ struct Shelf{
             this->type = type;
         }
         ~Shelf(){
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
           media.clear();
@@ -47,20 +48,10 @@ struct Shelf{
             this->type = other.type;
             return *this;
 >>>>>>> driver-case-statement
+=======
+          media.clear();
+>>>>>>> parent of 119a1c4 (complete program 1)
         }
-        //default copy operator lead to a few issues - formatted based on https://en.cppreference.com/w/cpp/language/copy_assignment
-        //copy assignment operator
-        Shelf& operator = (const Shelf& other){
-            for(int i = 0; i < int(other.media.size()); i++){
-                this->media.push_back(other.media.at(i)); 
-            }
-            this->size = other.size;
-            this->type = other.type;
-            return *this;
->>>>>>> Stashed changes
-        }
-
-        //function prototypes
         Shelf(Media arr[]);
         void setItem(Media, int);
         void setItem(std::string, std::string, int, double, int);
@@ -75,8 +66,6 @@ struct Shelf{
     
 };
 
-
-//other function prototypes related to Shelf
 bool importFile(std::string, std::string, Shelf&);
 
 bool exportFile(std::string, Shelf);

@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
 /* 
  * Written by Jonathan Salvato
  * 9/23/24
  * Purpose Dynamically allocate media types
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -26,6 +30,8 @@
  * 9/23/24, 10/4/2024
  * Purpose: Dynamically allocate media types
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
  */
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){

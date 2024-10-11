@@ -17,6 +17,7 @@
 void printMenu(Storage library);
 void inpVer(int& out, int lowerBound, int upperBound, std::string qText = "Enter choice:   ", std::string invText = "Input invalid.");
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 int main(){
@@ -63,6 +64,10 @@ int main()
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+=======
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+>>>>>>> parent of 119a1c4 (complete program 1)
     std::cout << "\n***Welcome to Media Library!***\n";
 
     //TEMP!!! JUST FOR TESTING
@@ -70,6 +75,7 @@ int main()
     Media B("Media B", "J S", 2002, 0);
     Media C("Media C", "J S", 2002, 0);
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
     Media arr1[] = {A, B};
@@ -93,6 +99,10 @@ int main()
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+=======
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+>>>>>>> parent of 119a1c4 (complete program 1)
 
     std::cout << "Hello there";
 
@@ -111,6 +121,7 @@ int main()
     do{
         printMenu(library);
         inpVer(userChoice, 1, 4);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
@@ -118,12 +129,15 @@ int main()
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
         switch(userChoice){
             case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                            //or edit individual element
             case 2: break; //input file name, call importFile()
             case 3: break; //iterate through shelves, input filename/ directory and call export file for each
             default: break;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -284,10 +298,13 @@ int main()
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
         }
     }while(userChoice!=4);
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 void printMenu(Storage library){
@@ -315,6 +332,9 @@ void printMainMenu(Storage &library)
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+=======
+void printMenu(Storage library){
+>>>>>>> parent of 119a1c4 (complete program 1)
     std::cout << "\nYour library contains:";
     //instead of library.getSize()
     for(int i = 0; i < 2; i++){

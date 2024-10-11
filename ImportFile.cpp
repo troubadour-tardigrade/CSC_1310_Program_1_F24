@@ -1,5 +1,5 @@
 /*
- * Contributers: Jonathan Salvato
+ * Written by Jonathan Salvato
  * 9/23/24
  * Purpose: allows for importing data from files
  */
@@ -36,6 +36,7 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
     {
         // reading a row
         getline(inputFile, input, ','); // reading in the line up to the first comma (delimiter) as the title of the media object
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
@@ -66,6 +67,8 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
 >>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
         temp.setTitle(input);
         getline(inputFile, input, ','); // reading between the first and second delimiter as the creator/publisher of the media object
         temp.setCreator(input);

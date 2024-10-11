@@ -1,7 +1,7 @@
 /* 
- * Contributers: Jack Seger, Jonathan Salvato
+ * Written by Jack Seger
  * 9/13/24
- * Purpose: Base Level Data Structure, stores fundamental information
+ * Header for the media class
  */
 
 #ifndef MEDIA_H
@@ -11,6 +11,8 @@
 
 class Media
 {
+    // parent class for other media
+
 private:
     std::string title;
     std::string creator;

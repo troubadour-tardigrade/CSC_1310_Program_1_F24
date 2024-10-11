@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 /* 
@@ -5,6 +6,8 @@
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
 /* 
 =======
 /*
@@ -15,10 +18,6 @@
 /*
 >>>>>>> driver-case-statement
  * Written by Jonathan Salvato
-=======
-/*
- * Contributers: Jonathan Salvato
->>>>>>> Stashed changes
  * 9/25/24
  * Purpose: Storage Data Type functions and other
  */
@@ -83,6 +82,7 @@ void Storage::delShelf(int index){
     changeSize(size - 1);
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 // Function definition for getShelf which will return the current shelf content
@@ -119,6 +119,9 @@ Shelf* Storage::getS(int index)
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
 >>>>>>> driver-case-statement
+=======
+// Function definition for getShelf which will return the current shelf content
+>>>>>>> parent of 119a1c4 (complete program 1)
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
@@ -137,6 +140,7 @@ void Storage::printStorage()
     {
         std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
     }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
@@ -194,4 +198,6 @@ void Storage::newShelf(){
 >>>>>>> driver-case-statement
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
 }
