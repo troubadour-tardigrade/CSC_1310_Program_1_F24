@@ -18,12 +18,31 @@ void printMenu(Storage library);
 void inpVer(int& out, int lowerBound, int upperBound, std::string qText = "Enter choice:   ", std::string invText = "Input invalid.");
 
 <<<<<<< Updated upstream
+<<<<<<< HEAD
 int main(){
     //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
 =======
 int main()
 {
     //variable declerations
+=======
+int main()
+{
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+=======
+int main()
+{
+    //variable declerations
+=======
+int main()
+{
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
     std::string file_name;
     std::string media_file_type;
     std::string strTemp;
@@ -34,6 +53,15 @@ int main()
     Shelf import_Shelf; // temp variable for importing a file to a shelf in the switch case
 
     // main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> driver-case-statement
 >>>>>>> Stashed changes
     std::cout << "\n***Welcome to Media Library!***\n";
 
@@ -43,11 +71,27 @@ int main()
     Media C("Media C", "J S", 2002, 0);
 
 <<<<<<< Updated upstream
+<<<<<<< HEAD
     Media arr1[] = {A, B};
     Media arr2[] = {C};
 =======
     //default/base library
     Media arr1[] = {A};
+=======
+    Media arr1[] = {A};
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+=======
+    //default/base library
+    Media arr1[] = {A};
+>>>>>>> Stashed changes
+=======
+    Media arr1[] = {A};
+>>>>>>> driver-case-statement
+>>>>>>> driver-case-statement
 >>>>>>> Stashed changes
 
     std::cout << "Hello there";
@@ -68,6 +112,12 @@ int main()
         printMenu(library);
         inpVer(userChoice, 1, 4);
 <<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+>>>>>>> driver-case-statement
         switch(userChoice){
             case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                            //or edit individual element
@@ -75,6 +125,12 @@ int main()
             case 3: break; //iterate through shelves, input filename/ directory and call export file for each
             default: break;
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
         switch (userChoice)
         {
         // case 1 is for editing a shelf (Adding to an existing shelf, viewing the items on a shelf, etc.)
@@ -120,7 +176,17 @@ int main()
                     break;
 
                 case 7:
+<<<<<<< HEAD
                     // Take in the index, or range of indexes, and removes the item(s) from the library
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                    // Take in the index, or range of indexes, and removes the item(s) from the library
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
                     std::cout << "How many items do you wish to delete from the shelf?" << std::endl;
                     std::cin >> temp_index;
 
@@ -208,11 +274,33 @@ int main()
             break; // iterate through shelves, input filename/ directory and call export file for each
         default:
             break;
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> driver-case-statement
 >>>>>>> Stashed changes
         }
     }while(userChoice!=4);
 }
 
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+void printMenu(Storage library){
+=======
+
+// Function definition for printMainMenum, Prints the main menu also displaying the library
+void printMainMenu(Storage &library)
+{
+=======
+void printMainMenu(Storage &library)
+{
+=======
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 void printMenu(Storage library){
 =======
@@ -220,6 +308,12 @@ void printMenu(Storage library){
 // Function definition for printMainMenum, Prints the main menu also displaying the library
 void printMainMenu(Storage &library)
 {
+>>>>>>> Stashed changes
+=======
+void printMainMenu(Storage &library)
+{
+>>>>>>> driver-case-statement
+>>>>>>> driver-case-statement
 >>>>>>> Stashed changes
     std::cout << "\nYour library contains:";
     //instead of library.getSize()

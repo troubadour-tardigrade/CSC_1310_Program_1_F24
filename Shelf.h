@@ -23,9 +23,30 @@ struct Shelf{
         }
         ~Shelf(){
 <<<<<<< Updated upstream
+<<<<<<< HEAD
           media.clear();
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+          media.clear();
+=======
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
             media.clear();
+=======
+            media.clear();
+        }
+        //copy assignment operator - https://en.cppreference.com/w/cpp/language/copy_assignment
+        Shelf& operator = (const Shelf& other){
+            for(int i = 0; i < other.media.size(); i++){
+                this->media.push_back(other.media.at(i)); 
+            }
+            this->size = other.size;
+            this->type = other.type;
+            return *this;
+>>>>>>> driver-case-statement
         }
         //default copy operator lead to a few issues - formatted based on https://en.cppreference.com/w/cpp/language/copy_assignment
         //copy assignment operator

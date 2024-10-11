@@ -1,5 +1,19 @@
 <<<<<<< Updated upstream
+<<<<<<< HEAD
 /* 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+/* 
+=======
+/*
+>>>>>>> driver-case-statement
+ * Written by Jonathan Salvato
+=======
+>>>>>>> Stashed changes
+/*
+>>>>>>> driver-case-statement
  * Written by Jonathan Salvato
 =======
 /*
@@ -70,16 +84,41 @@ void Storage::delShelf(int index){
 }
 
 <<<<<<< Updated upstream
+<<<<<<< HEAD
 // Function definition for getShelf which will return the current shelf content
 =======
 // Function definition for getS which will return A POINTER to the current shelf content
+=======
+// Function definition for getS which will return the a pointer to the current shelf content
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+// Function definition for getShelf which will return the current shelf content
+=======
+// Function definition for getS which will return A POINTER to the current shelf content
+=======
+// Function definition for getS which will return the a pointer to the current shelf content
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 Shelf* Storage::getS(int index)
 {
     return (stg[index]);
 }
 
+<<<<<<< HEAD
 // Function definition for getShelf which will return the Shelf obj at a given index
 >>>>>>> Stashed changes
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+// Function definition for getShelf which will return the Shelf obj at a given index
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
@@ -99,10 +138,29 @@ void Storage::printStorage()
         std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
     }
 <<<<<<< Updated upstream
+<<<<<<< HEAD
 =======
 }
 
 // Function definition for changeShelf that will exchange or add shelf content to the array
+=======
+}
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+}
+
+// Function definition for changeShelf that will exchange or add shelf content to the array
+=======
+}
+
+
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
 void Storage::changeShelf(Shelf& newObj, int i)
 {
     if(i >= size){
@@ -112,9 +170,28 @@ void Storage::changeShelf(Shelf& newObj, int i)
     *stg[i] = newObj;
 }
 
+<<<<<<< HEAD
 // Function definition for newShelf
 void Storage::newShelf(){
     changeSize(size);
     stg[size] = new Shelf();
+=======
+<<<<<<< Updated upstream
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+=======
+<<<<<<< HEAD
+// Function definition for newShelf
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+>>>>>>> Stashed changes
+=======
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+>>>>>>> driver-case-statement
+>>>>>>> driver-case-statement
 >>>>>>> Stashed changes
 }
