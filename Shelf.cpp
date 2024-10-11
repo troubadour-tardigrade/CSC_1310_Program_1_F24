@@ -1,3 +1,18 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+/* 
+ * Written by Jonathan Salvato
+ * 9/23/24
+=======
+/*
+ * Contributors: Jonathan Salvato, Nick Romsdal
+ * 9/23/24, 10/4/2024
+>>>>>>> driver-case-statement
+ * Purpose Dynamically allocate media types
+=======
+>>>>>>> Stashed changes
 /*
  * Contributors: Jonathan Salvato, Nick Romsdal
  * 9/23/24, 10/4/2024

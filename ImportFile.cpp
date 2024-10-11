@@ -36,9 +36,26 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
     {
         // reading a row
         getline(inputFile, input, ','); // reading in the line up to the first comma (delimiter) as the title of the media object
+<<<<<<< Updated upstream
         if(input.at(0) == '\n'){
             input.erase(0, 1);
         }
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+        
+        if(input.at(0) == '\n'){ //removing breaks if they exist
+            input.erase(0, 1);
+        }
+        
+>>>>>>> Stashed changes
+=======
+        if(input.at(0) == '\n'){
+            input.erase(0, 1);
+        }
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
         temp.setTitle(input);
         getline(inputFile, input, ','); // reading between the first and second delimiter as the creator/publisher of the media object
         temp.setCreator(input);

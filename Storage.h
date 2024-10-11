@@ -21,7 +21,19 @@ class Storage{
         }
         delete stg;
     }
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+
+    //function Prototypes
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
     Storage(int);
     Storage(int, Shelf[]);
     void setMedia(int, Shelf&);

@@ -18,8 +18,23 @@ void printMainMenu(Storage &library);
 void printShelfMenu(Shelf shelf);
 void inpVer(int &out, int lowerBound, int upperBound, std::string qText = "Enter choice:   ", std::string invText = "Input invalid.");
 
+<<<<<<< Updated upstream
 int main()
 {
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+=======
+int main()
+{
+    //variable declerations
+=======
+int main()
+{
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
     std::string file_name;
     std::string media_file_type;
     std::string strTemp;
@@ -30,11 +45,32 @@ int main()
     Shelf import_Shelf; // temp variable for importing a file to a shelf in the switch case
 
     // main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
     std::cout << "\n***Welcome to Media Library!***\n";
 
     Media A("The Wisdom of the Bullfrog", "Admiral Bill McRaven", 2023, 2799);
 
+<<<<<<< Updated upstream
     Media arr1[] = {A};
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+=======
+    //default/base library
+    Media arr1[] = {A};
+>>>>>>> Stashed changes
+=======
+    Media arr1[] = {A};
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
 
     Shelf SA(arr1); // Initalizing Shelf Object A
     SA.setType("Books");
@@ -49,6 +85,20 @@ int main()
     {
         printMainMenu(library);
         inpVer(userChoice, 1, 4);
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        switch(userChoice){
+            case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
+                           //or edit individual element
+            case 2: break; //input file name, call importFile()
+            case 3: break; //iterate through shelves, input filename/ directory and call export file for each
+            default: break;
+=======
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
         switch (userChoice)
         {
         // case 1 is for editing a shelf (Adding to an existing shelf, viewing the items on a shelf, etc.)
@@ -94,6 +144,13 @@ int main()
                     break;
 
                 case 7:
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                    // Take in the index, or range of indexes, and removes the item(s) from the library
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
                     std::cout << "How many items do you wish to delete from the shelf?" << std::endl;
                     std::cin >> temp_index;
 
@@ -181,14 +238,37 @@ int main()
             break; // iterate through shelves, input filename/ directory and call export file for each
         default:
             break;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
         }
     } while (userChoice != 4);
 
     return 0;
 }
 
+<<<<<<< Updated upstream
 void printMainMenu(Storage &library)
 {
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+void printMenu(Storage library){
+=======
+
+// Function definition for printMainMenum, Prints the main menu also displaying the library
+void printMainMenu(Storage &library)
+{
+>>>>>>> Stashed changes
+=======
+void printMainMenu(Storage &library)
+{
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
     std::cout << "\nYour library contains:";
 
     for (int i = 0; i < library.getSize(); i++)

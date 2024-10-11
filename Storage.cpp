@@ -1,3 +1,14 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+/* 
+=======
+/*
+>>>>>>> driver-case-statement
+ * Written by Jonathan Salvato
+=======
+>>>>>>> Stashed changes
 /*
  * Written by Jonathan Salvato
  * 9/25/24
@@ -79,12 +90,31 @@ void Storage::delShelf(int index)
     changeSize(size - 1);
 }
 
+<<<<<<< Updated upstream
 // Function definition for getS which will return the a pointer to the current shelf content
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+// Function definition for getShelf which will return the current shelf content
+=======
+// Function definition for getS which will return A POINTER to the current shelf content
+=======
+// Function definition for getS which will return the a pointer to the current shelf content
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
 Shelf* Storage::getS(int index)
 {
     return (stg[index]);
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+// Function definition for getShelf which will return the Shelf obj at a given index
+>>>>>>> Stashed changes
+=======
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
 Shelf Storage::getShelf(int index){
     return (*stg[index]);   
 }
@@ -113,9 +143,23 @@ void Storage::printStorage(bool showMediaType)
             std::cout << std::endl;
         }
     }
+<<<<<<< Updated upstream
 }
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+}
+
+// Function definition for changeShelf that will exchange or add shelf content to the array
+=======
+}
+
+
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
 void Storage::changeShelf(Shelf& newObj, int i)
 {
     if(i >= size){
@@ -125,7 +169,21 @@ void Storage::changeShelf(Shelf& newObj, int i)
     *stg[i] = newObj;
 }
 
+<<<<<<< Updated upstream
 void Storage::newShelf(){
     changeSize(size);
     stg[size] = new Shelf();
+=======
+<<<<<<< HEAD
+// Function definition for newShelf
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+>>>>>>> Stashed changes
+=======
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
 }

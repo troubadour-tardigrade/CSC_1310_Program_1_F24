@@ -25,7 +25,26 @@ struct Shelf{
         }
         //destructor
         ~Shelf(){
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+          media.clear();
+=======
+>>>>>>> Stashed changes
             media.clear();
+=======
+            media.clear();
+        }
+        //copy assignment operator - https://en.cppreference.com/w/cpp/language/copy_assignment
+        Shelf& operator = (const Shelf& other){
+            for(int i = 0; i < other.media.size(); i++){
+                this->media.push_back(other.media.at(i)); 
+            }
+            this->size = other.size;
+            this->type = other.type;
+            return *this;
+>>>>>>> driver-case-statement
         }
         //copy assignment operator - https://en.cppreference.com/w/cpp/language/copy_assignment
         Shelf& operator = (const Shelf& other){
