@@ -7,7 +7,7 @@
 Shelf::Shelf(Media arr[])
 {
     setType("Basic Media");
-    size = sizeof(*arr) / sizeof(arr[0]);
+    this->size = sizeof(*arr) / sizeof(arr[0]);
     // media.resize(size);
     /*for(int i = 0; i < size; i++){
         media.push_back(arr[i]);
@@ -31,15 +31,15 @@ void Shelf::setItem(std::string name, std::string creator, int year, double size
 // increase the size of the shelf by one and insert the new media object to the back of the shelf list
 void Shelf::addItem(Media item)
 {
-    size++;
+    this->size++;
     media.push_back(item);
 }
 
 // decrement shelf size by one and delete the object at the index provided in the argument
 void Shelf::removeItem(int index)
 {
-    size--;
     media.erase(media.begin() + index);
+    size = media.size();
 }
 
 // decrement shelf size by the difference between upper and lower arguments and delete everything between index lower and index upper

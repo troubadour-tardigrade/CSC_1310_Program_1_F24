@@ -22,8 +22,11 @@ int main()
 {
     std::string file_name;
     std::string media_file_type;
+    std::string strTemp;
     int shelf_index;
     int userChoice;
+    int temp_index;
+    int lowerDelLimit;
     Shelf import_Shelf; // temp variable for importing a file to a shelf in the switch case
 
     // main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
@@ -54,45 +57,77 @@ int main()
             // Printing all shelves that currently exist in the library
             library.printStorage();
 
-            std::cout << std::endl << "Enter the index for the shelf you wish to edit:\t";
+            std::cout << std::endl
+                      << "Enter the index for the shelf you wish to edit:\t";
             std::cin >> shelf_index;
             std::cin.ignore();
             std::cout << std::endl; // Creating a break between the lines of text for better readability
-            
 
-            printShelfMenu(*library.getS(shelf_index - 1));
-            inpVer(userChoice, 5, 8);
-            switch (userChoice)
+            do
             {
-            case 5:
-                // print all titles of shelf content
-                for (int i = 0; i < library.getShelf(shelf_index - 1).getSize(); i++)
+                printShelfMenu(*library.getS(shelf_index - 1));
+                inpVer(userChoice, 5, 8);
+                switch (userChoice)
                 {
-                    std::cout << "Item Index: " << i
-                              << "\tItem Title: " << library.getShelf(shelf_index - 1).getItem(i).getTitle()
-                              << "\tCreator: " << library.getShelf(shelf_index - 1).getItem(i).getCreator()
-                              << "\tYear released: " << library.getShelf(shelf_index - 1).getItem(i).getYear()
-                              << "\tTimes played: " << library.getShelf(shelf_index - 1).getItem(i).getNum() << std::endl;
+                case 5:
+                    // print all titles of shelf content
+                    for (int i = 0; i < library.getShelf(shelf_index - 1).getSize(); i++)
+                    {
+                        std::cout << "Item Index: " << i
+                                  << "\tItem Title: " << library.getShelf(shelf_index - 1).getItem(i).getTitle()
+                                  << std::endl;
+                    }
+                    break;
+
+                case 6:
+                    // Take in the index value of an item and return all of the information on that item
+                    std::cout << "Enter the Item Index value for the item you want to look at:\t";
+                    std::cin >> temp_index;
+
+                    std::cout << "Item Index: " << temp_index
+                              << "\tItem Title:\t" << library.getShelf(shelf_index - 1).getItem(temp_index).getTitle()
+                              << "\tItem Creator:\t" << library.getShelf(shelf_index - 1).getItem(temp_index).getCreator()
+                              << "\tYear of Publishing:\t" << library.getShelf(shelf_index - 1).getItem(temp_index).getYear()
+                              << "\tNumber of Plays:\t" << library.getShelf(shelf_index - 1).getItem(temp_index).getNum()
+                              << std::endl;
+
+                    break;
+
+                case 7:
+                    std::cout << "How many items do you wish to delete from the shelf?" << std::endl;
+                    std::cin >> temp_index;
+
+                    if (temp_index > 1)
+                    {
+                        std::cout << "What is the index value of the first item in the range of items you wish to delete?\t";
+                        std::cin >> lowerDelLimit;
+
+                        strTemp = library.getShelf(shelf_index - 1).getItem(lowerDelLimit).getTitle();
+
+                        library.getS(shelf_index - 1)->removeItem(lowerDelLimit, lowerDelLimit + temp_index);
+
+                        std::cout << strTemp << " has been successfully deleted." << std::endl;
+                    }
+
+                    else if (temp_index == 1)
+                    {
+                        std::cout << "What is the index for the value you wish to delete?\t";
+                        std::cin >> lowerDelLimit;
+                        strTemp = library.getShelf(shelf_index - 1).getItem(lowerDelLimit).getTitle();
+                        library.getS(shelf_index - 1)->removeItem(lowerDelLimit);
+
+                        std::cout << strTemp << " has been successfully deleted." << std::endl;
+                    }
+
+                    // Ask the user if they want to delete one element or a range of elements
+                    // Then ask for the index or lower and upper index values they wish to delete
+                    // Then delete the indicies
+
+                    break;
+                default:
+                    break;
                 }
-                break;
-
-            case 6:
-                // Take in the index value of an item and return all of the information on that item
-
-                break;
-
-            case 7:
-                // Ask the user if they want to delete one element or a range of elements
-                // Then ask for the index or lower and upper index values they wish to delete
-                // Then delete the indicies
-                break;
-            case 8:
-                printMainMenu(library);
-                inpVer(userChoice, 1, 4);
-                break;
-            default:
-                break;
-            }
+            } while (userChoice != 8);
 
             break; // edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                    // or edit individual element
@@ -116,12 +151,10 @@ int main()
             inpVer(shelf_index, 1, library.getSize() + 1);
             std::cin.ignore();
 
-            std::cout << "Lib Size:\t" << library.getSize() << std::endl;
             import_Shelf.removeItem(0, import_Shelf.getSize());
             if (importFile(file_name, media_file_type, import_Shelf))
             {
                 library.changeShelf(import_Shelf, shelf_index - 1);
-                std::cout << "Lib Size:\t" << library.getSize() << std::endl;
                 std::cout << "\nImported " << library.getShelf(0).getSize() << " things\n";
                 std::cout << "File successfully imported" << std::endl;
             }
@@ -133,7 +166,7 @@ int main()
 
             break;
         case 3:
-            std::cin.ignore();
+            
             break; // iterate through shelves, input filename/ directory and call export file for each
         default:
             break;
@@ -169,7 +202,8 @@ void printShelfMenu(Shelf shelf)
         - Remove an element from the shelf
         - Exit Shelf
     */
-    std::cout << "Information about this shelf." << std::endl << std::endl;
+    std::cout << "Information about this shelf." << std::endl
+              << std::endl;
     std::cout << "Number of items on the shelf:\t" << shelf.getSize() << std::endl;
     std::cout << "Type of media on shelf:\t" << shelf.getType() << std::endl;
 
