@@ -22,6 +22,11 @@ class Storage{
         delete stg;
     }
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
 
 =======
 <<<<<<< HEAD
@@ -33,6 +38,14 @@ class Storage{
 =======
 
 >>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
 >>>>>>> Stashed changes
     Storage(int);
     Storage(int, Shelf[]);

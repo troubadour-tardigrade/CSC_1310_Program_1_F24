@@ -19,6 +19,11 @@ void printShelfMenu(Shelf shelf);
 void inpVer(int &out, int lowerBound, int upperBound, std::string qText = "Enter choice:   ", std::string invText = "Input invalid.");
 
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
 int main()
 {
 =======
@@ -52,10 +57,26 @@ int main()
 =======
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+int main(){
+    //main Storage class -- holds ptrs to shelves, which have ptrs to Media objects
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
     std::cout << "\n***Welcome to Media Library!***\n";
 
     Media A("The Wisdom of the Bullfrog", "Admiral Bill McRaven", 2023, 2799);
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 <<<<<<< Updated upstream
     Media arr1[] = {A};
 =======
@@ -70,6 +91,17 @@ int main()
 =======
     Media arr1[] = {A};
 >>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+    Media arr1[] = {A, B};
+    Media arr2[] = {C};
+>>>>>>> parent of 119a1c4 (complete program 1)
 >>>>>>> Stashed changes
 
     Shelf SA(arr1); // Initalizing Shelf Object A
@@ -88,13 +120,33 @@ int main()
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
         switch(userChoice){
             case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                            //or edit individual element
             case 2: break; //input file name, call importFile()
             case 3: break; //iterate through shelves, input filename/ directory and call export file for each
             default: break;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 =======
 =======
 >>>>>>> driver-case-statement
@@ -245,12 +297,24 @@ int main()
 =======
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
         }
     } while (userChoice != 4);
 
     return 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 <<<<<<< Updated upstream
 void printMainMenu(Storage &library)
 {
@@ -268,6 +332,15 @@ void printMainMenu(Storage &library)
 void printMainMenu(Storage &library)
 {
 >>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+void printMenu(Storage library){
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+void printMenu(Storage library){
+>>>>>>> parent of 119a1c4 (complete program 1)
 >>>>>>> Stashed changes
     std::cout << "\nYour library contains:";
 

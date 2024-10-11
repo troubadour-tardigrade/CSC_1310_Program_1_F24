@@ -1,6 +1,11 @@
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 /* 
 =======
@@ -10,6 +15,13 @@
 =======
 >>>>>>> Stashed changes
 /*
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+/* 
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
  * Written by Jonathan Salvato
  * 9/25/24
  * Purpose: Storage Data Type functions and other
@@ -91,6 +103,11 @@ void Storage::delShelf(int index)
 }
 
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
 // Function definition for getS which will return the a pointer to the current shelf content
 =======
 <<<<<<< HEAD
@@ -115,6 +132,16 @@ Shelf* Storage::getS(int index)
 =======
 >>>>>>> driver-case-statement
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> driver-case-statement
+=======
+// Function definition for getShelf which will return the current shelf content
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+// Function definition for getShelf which will return the current shelf content
+>>>>>>> parent of 119a1c4 (complete program 1)
+>>>>>>> Stashed changes
 Shelf Storage::getShelf(int index){
     return (*stg[index]);   
 }
@@ -132,7 +159,18 @@ void Storage::printStorage(bool showMediaType)
 
     for (int i = 0; i < getSize(); i++)
     {
+<<<<<<< Updated upstream
         std::cout << "Shelf " << (i + 1);
+=======
+        std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+}
+>>>>>>> Stashed changes
 
         if (showMediaType)
         {
@@ -185,5 +223,12 @@ void Storage::newShelf(){
     changeSize(size);
     stg[size] = new Shelf();
 >>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
+=======
+>>>>>>> parent of 119a1c4 (complete program 1)
 >>>>>>> Stashed changes
 }
