@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 /* 
  * Written by Jonathan Salvato
+=======
+/*
+ * Contributers: Jonathan Salvato
+>>>>>>> Stashed changes
  * 9/25/24
  * Purpose: Storage Data Type functions and other
  */
@@ -64,7 +69,17 @@ void Storage::delShelf(int index){
     changeSize(size - 1);
 }
 
+<<<<<<< Updated upstream
 // Function definition for getShelf which will return the current shelf content
+=======
+// Function definition for getS which will return A POINTER to the current shelf content
+Shelf* Storage::getS(int index)
+{
+    return (stg[index]);
+}
+
+// Function definition for getShelf which will return the Shelf obj at a given index
+>>>>>>> Stashed changes
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
@@ -83,4 +98,23 @@ void Storage::printStorage()
     {
         std::cout << "Shelf " << i << " media type:\t" << getShelf(i).getType() << std::endl;  // print each shelf's media type
     }
+<<<<<<< Updated upstream
+=======
+}
+
+// Function definition for changeShelf that will exchange or add shelf content to the array
+void Storage::changeShelf(Shelf& newObj, int i)
+{
+    if(i >= size){
+        changeSize(i + 1);
+    }
+    stg[i] = new Shelf;
+    *stg[i] = newObj;
+}
+
+// Function definition for newShelf
+void Storage::newShelf(){
+    changeSize(size);
+    stg[size] = new Shelf();
+>>>>>>> Stashed changes
 }

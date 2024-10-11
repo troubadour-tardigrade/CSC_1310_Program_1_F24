@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 /* 
  * Written by Jonathan Salvato
  * 9/23/24
  * Purpose Dynamically allocate media types
+=======
+/*
+ * Contributors: Jonathan Salvato, Nick Romsdal
+ * 9/23/24, 10/4/2024
+ * Purpose: Dynamically allocate media types
+>>>>>>> Stashed changes
  */
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){

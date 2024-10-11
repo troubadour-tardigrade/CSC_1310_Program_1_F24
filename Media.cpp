@@ -1,7 +1,7 @@
 /* 
  * Written by Jack Seger
  * 9/13/24
- * Purpose Class for individual instances of media
+ * Purpose: Class for individual instances of media
  *      Used to act as a parent class for other instances, but we decided it would be easier to have one class wear multiple hats
  */
 

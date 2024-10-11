@@ -1,5 +1,5 @@
 /* 
- * Written by Jonathan Salvato
+ * Contributers: Jonathan Salvato
  * 9/25/24
  * Purpose: allows for exporting data from Shelf to a file
  */
@@ -23,6 +23,7 @@ bool exportFile(std::string directory, Shelf obj){
         outFile << "Title, Creator, Year, Num";
         for(int j = 0; j < 4; j++){
             switch(j){
+                //outputting everything in our chosen format
                 case(0): outFile << obj.getItem(i).getTitle(); break;
                 case(1): outFile << obj.getItem(i).getCreator(); break;
                 case(2): outFile << obj.getItem(i).getYear(); break;

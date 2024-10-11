@@ -1,11 +1,12 @@
 /* 
- * Written by Jonathan Salvato
+ * Contributers: Jonathan Salvato
  * 9/25/24
- * Purpose: Storage Data Type
+ * Purpose: Storage Data Type, points to several shelf data types and allows for creation and destruction of shelves. 
  */
 #include "Shelf.h"
 class Storage{
     private:
+        //internal variables
         int size;
         Shelf** stg;
     public:
@@ -16,6 +17,11 @@ class Storage{
     ~Storage(){
         delete stg;
     }
+<<<<<<< Updated upstream
+=======
+
+    //function Prototypes
+>>>>>>> Stashed changes
     Storage(int);
     Storage(int, Shelf[]);
     void setMedia(int, Shelf&);
