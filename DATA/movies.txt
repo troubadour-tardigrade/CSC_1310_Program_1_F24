@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+Title, Creator, Year, NumAvatar, James Cameron,2009,21,Title, Creator, Year, NumAvengers: Endgame, Anthony Russo; Joe Russo,2019,25,Title, Creator, Year, NumAvatar: The Way of Water, James Cemeron,2022,9,Title, Creator, Year, NumTitanic, James Cameron,1997,300,Title, Creator, Year, NumStar Wars: The Force Awakens, J.J. Abrams,2015,5,Title, Creator, Year, NumAvengers: Infinity War, Anthony Russo; Joe Russo,2018,24,Title, Creator, Year, NumSpider-Man: No Way Home, Jon Watts,2021,12,Title, Creator, Year, NumInside Out 2, Kelsey Mann,2024,3,Title, Creator, Year, NumJurassic World, Colin Trevorrow,2015,5,Title, Creator, Year, NumThe Lion King, Jon Favreau,2019,23,Title, Creator, Year, NumThe Avengers, Joss Whedon,2012,15,Title, Creator, Year, NumFrozen II, Chris Buck; Jennifer Lee,2019,4,Title, Creator, Year, NumBarbie, Greta Gerwig,2023,90,Title, Creator, Year, NumAvengers: Age of Ultron, Joss Whedon,2015,10,Title, Creator, Year, NumThe Super Mario Bros. Movie, Aaron Horvath; Micheal Jelenic,2023,19,Title, Creator, Year, NumBlack Panther, Ryan Coogler,2018,5,Title, Creator, Year, NumHarry Potter and the Deathly Hallows - Part 2, David Yates,2011,1,Title, Creator, Year, NumStar Wars: The Last Jedi, Rian Johnson,2017,4,Title, Creator, Year, NumJurassic World: Fallen Kingdom, J.A. Bayona.,2018,2,Title, Creator, Year, NumFrozen, Chris Buck; Jennifer Lee,2013,4,Title, Creator, Year, NumDeadpool & Wolverine, Shawn Levy,2024,3,Title, Creator, Year, NumBeauty and the Beast, Bill Condon,2017,4,Title, Creator, Year, NumMorbius, Daniel Espinosa,20222.14748e+09,
+=======
+<<<<<<< HEAD
+>>>>>>> driver-case-statement
 Name,Director,Year,Watched,
 Avatar,James Cameron,2009,21,
 Avengers: Endgame,Anthony Russo; Joe Russo,2019,25,
@@ -24,3 +31,10 @@ Frozen,Chris Buck; Jennifer Lee,2013,4,
 Deadpool & Wolverine,Shawn Levy,2024,3,
 Beauty and the Beast,Bill Condon,2017,4,
 Morbius,Daniel Espinosa,2022,2147483647
+<<<<<<< HEAD
+=======
+=======
+Title, Creator, Year, NumAvatar, James Cameron,2009,21,Title, Creator, Year, NumAvengers: Endgame, Anthony Russo; Joe Russo,2019,25,Title, Creator, Year, NumAvatar: The Way of Water, James Cemeron,2022,9,Title, Creator, Year, NumTitanic, James Cameron,1997,300,Title, Creator, Year, NumStar Wars: The Force Awakens, J.J. Abrams,2015,5,Title, Creator, Year, NumAvengers: Infinity War, Anthony Russo; Joe Russo,2018,24,Title, Creator, Year, NumSpider-Man: No Way Home, Jon Watts,2021,12,Title, Creator, Year, NumInside Out 2, Kelsey Mann,2024,3,Title, Creator, Year, NumJurassic World, Colin Trevorrow,2015,5,Title, Creator, Year, NumThe Lion King, Jon Favreau,2019,23,Title, Creator, Year, NumThe Avengers, Joss Whedon,2012,15,Title, Creator, Year, NumFrozen II, Chris Buck; Jennifer Lee,2019,4,Title, Creator, Year, NumBarbie, Greta Gerwig,2023,90,Title, Creator, Year, NumAvengers: Age of Ultron, Joss Whedon,2015,10,Title, Creator, Year, NumThe Super Mario Bros. Movie, Aaron Horvath; Micheal Jelenic,2023,19,Title, Creator, Year, NumBlack Panther, Ryan Coogler,2018,5,Title, Creator, Year, NumHarry Potter and the Deathly Hallows - Part 2, David Yates,2011,1,Title, Creator, Year, NumStar Wars: The Last Jedi, Rian Johnson,2017,4,Title, Creator, Year, NumJurassic World: Fallen Kingdom, J.A. Bayona.,2018,2,Title, Creator, Year, NumFrozen, Chris Buck; Jennifer Lee,2013,4,Title, Creator, Year, NumDeadpool & Wolverine, Shawn Levy,2024,3,Title, Creator, Year, NumBeauty and the Beast, Bill Condon,2017,4,Title, Creator, Year, NumMorbius, Daniel Espinosa,20222.14748e+09,
+>>>>>>> driver-case-statement
+>>>>>>> Stashed changes
+>>>>>>> driver-case-statement
