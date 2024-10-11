@@ -166,7 +166,18 @@ int main()
 
             break;
         case 3:
-            
+            for (int i = 0; i < library.getSize(); i++)
+            {
+                file_name = "DATA/" + library.getShelf(i).getType() + ".txt";
+                if(exportFile(file_name, library.getShelf(i)))
+                {
+                    std::cout << "Shelf " << i << " has been successfully exported to " << file_name << "." << std::endl;
+                }
+                else
+                {
+                    std::cout << "Shelf " << i << " failed to export." << std::endl;
+                }
+            }
             break; // iterate through shelves, input filename/ directory and call export file for each
         default:
             break;
